@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+        <link href="styles.css" rel="stylesheet">
+        <title>My Webpage</title>
+    </head>
+    <body>
+        <header>
+            <div class="list-group">
+                <ul class="list-group list-group-horizontal">
+                    <li class="list-group-item"><a href="interests.html">Interests</a></li>
+                    <li class="list-group-item"><a href="graduation.html">Gradution</a></li>
+                    <li class="list-group-item"><a href="github.html">GitHub</a></li>
+                </li>
+            </div>
+        </header>
+        <div class="cat">
+                <img id="cat" alt="cat" src="cat.png">
+        </div>
+
+        <div class="container">
+            <button class="avatar-btn">
+                <img id="avatar" alt="image of the woman" src="avatar.png">
+            </button>
+
+            <div id="graduation">
+                <p id="lightBg">Graduation:</p>
+                <span>Civil Engineering completed in 2014</span>
+                <span>Studying Data Analysis and Development</span>
+            </div>
+
+            <div class="text">
+                <h2>About me</h2>
+                <p>I'm Ana Jessica, 33 years old, and transitioning
+                   from Civil Engineering to Software Engineering.
+                   My professional interests lie in the backend sector.
+                </p>
+            </div>
+
+            <div id="rigthContainer">
+                <ul class="interests">
+                    <li id="lightBg">Interests:</li>
+                    <li>Math</li>
+                    <li>Games</li>
+                    <li>TV Shows</li>
+                </ul>
+                <div id="github">
+                    <a href="https://github.com/anajessica24">
+                        <img src="github.png">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </body>
+    <footer>
+        
+        <script>
+            const avatar_btn = document.querySelector('.avatar-btn');
+            const cat = document.getElementById('cat');
+            let count = 0;
+
+            cat.style.opacity = 0;
+
+            function handleClick() {
+                count++;
+                if(count>0 && count <3){
+                    cat.style.opacity = 0.8;
+                } else {
+                    count = 0;
+                    cat.style.opacity = 0;
+                }
+            }
+
+            avatar_btn.addEventListener('click', handleClick);
+
+        </script>
+    </footer>
+</html>
